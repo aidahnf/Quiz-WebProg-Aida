@@ -40,7 +40,7 @@
     <div class="col-8 d-flex flex-column">
         <h2 class="text-left">Peran Interactive Multimedia</h2>
         <h6>07 July 2024 | by: Haechan</h6>
-        <p>Interactive multimedia telah mengubah cara perusahaan berinteraksi dengan pelanggan mereka.</p>
+        <p>Interactive multimedia telah mengubah cara perusahaan berinteraksi dengan pelanggan mereka</p>
         <div class="mt-auto">
             <a href="{{ route('article.mulmed3') }}" type="button" class="btn" style="background-color: midnightblue; color: white; border-radius: 50px;">Read more...</a>
         </div>

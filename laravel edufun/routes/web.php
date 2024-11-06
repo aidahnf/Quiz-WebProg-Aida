@@ -9,13 +9,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Route::get('/admin/mahasiswa',[MahasiswaController::class, 'index']);
-
-
-Route::get('/articles', [ArticleController::class, 'index'])->name('articles.index');
-Route::get('/articles/{id}', [ArticleController::class, 'show'])->name('articles.show');
-
-Route::prefix('/admin')->group(function(){
+Route::prefix('/user')->group(function(){
     Route::get('/home', function() {
         return view('funedu.home');
     })->name('admin.home');
@@ -29,14 +23,14 @@ Route::prefix('/admin')->group(function(){
     })->name('admin.catsofteng');
 
     Route::get('/writers', [WriterController::class, 'index'])->name('admin.writers');
+    
 
     Route::get('/aboutus', function() {
         return view('funedu.aboutus');
     })->name('admin.aboutus');
 
-    // Route::get('/popular', function() {
-    //     return view('funedu.popular');
-    // })->name('admin.popular');
+    Route::get('/articles', [ArticleController::class, 'index'])->name('articles.index');
+    Route::get('/articles/{id}', [ArticleController::class, 'show'])->name('articles.show');
 
 });
 

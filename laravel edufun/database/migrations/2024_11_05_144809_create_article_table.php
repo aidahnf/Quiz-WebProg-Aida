@@ -15,15 +15,11 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->text('content');
-            // $table->unsignedBigInteger('writer_id'); 
-            $table->foreignID('writer_id')->references('id')->on('writer')->onDelete('cascade'); // Nama tabel harus 'writer'
+            $table->foreignID('writer_id')->references('id')->on('writer')->onDelete('cascade'); 
             $table->timestamps();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
         Schema::dropIfExists('article');

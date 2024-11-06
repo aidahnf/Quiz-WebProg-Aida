@@ -18,9 +18,7 @@ class articleSeeder extends Seeder
         $faker = Faker::create('id_ID');
         $writers = writerModel::all();
 
-
-
-        for($i=0; $i<30; $i++){
+        for($i=0; $i<6; $i++){
             articleModel::create([  
                 'writer_id' => $writers->random()->id, //ambil post secara acak
                 'title' => $faker->sentence, // Judul post dalam bahasa Indonesia

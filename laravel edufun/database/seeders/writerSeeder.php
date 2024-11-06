@@ -15,10 +15,7 @@ class writerSeeder extends Seeder
     public function run(): void
     {
         $faker = Faker::create('id_ID');
-        // $writer = writer::all();
-        // writer::factory()->count(10)->create();
-
-        for ($i = 0; $i < 3; $i++) {
+        for ($i = 0; $i < 2; $i++) {
             writerModel::create([
                     'name' => $faker->name, // Nama lengkap dalam bahasa Indonesia
                 ]); 
